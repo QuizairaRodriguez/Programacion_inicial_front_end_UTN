@@ -585,14 +585,11 @@ header {
     height: 100px;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    padding: 30px 50px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
-    object-fit: cover;
     align-items: center;
-    z-index: 1000;
 }
 
 header .logo {
@@ -602,17 +599,43 @@ header .logo {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    z-index: 10;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+nav{
+    position: fixed;
+    right: -200px;
+    top: 100px;
+    z-index: 9;
+    margin: 0 10px 0 0;
+    transition: right 0.3s;
+}
+
+.visible_menu {
+    right: 0;
 }
 
 nav ul {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    list-style: none; 
+    line-height: 40px;
 }
 
 nav ul li {
-    list-style: none;
     margin-left: 20px;
+    width: max-content;
 }
 
 nav ul li a {
@@ -627,6 +650,7 @@ nav ul li a:hover, nav ul li a.active {
     background: #fff;
     color: black;
     font-weight: 700;
+    transition: 0.5s;
 }
 
 main {
@@ -661,14 +685,13 @@ main {
     display: block;
     text-align: center;
     font-weight: 700;
-    font-size: 50px;
-    letter-spacing: 10px;
+    font-size: 40px;
     width: 100%;
     color: #fff;
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    height: 120px;
+    height: 100px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -683,6 +706,7 @@ main {
 
 .animations img#moon {
     mix-blend-mode: screen;
+    top: 500px;
 }
 
 .animations img#horizon {
@@ -700,11 +724,10 @@ main {
 .animations .welcome {
     color: #fff;
     white-space: nowrap;
-    font-size: 50px;
+    font-size: 25px;
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: 10px;
     z-index: 2;
     position: absolute;
     font-weight: 700;
@@ -713,9 +736,9 @@ main {
 }
 
 .presentation {
-    padding: 100px;
+    padding: 50px 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
@@ -724,33 +747,34 @@ main {
 
 .presentation h2 {
     width: 100%;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     padding: 0 0 50px 0;
     color: #fff;
 }
 
 .presentation .description{
-    width: 600px;
+    width: 300px;
     text-align: justify;
     padding: 20px;
-    font-size: 20px;
+    font-size: 14px;
     border: 1px solid #fff;
     border-radius: 20px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
     background-color: rgb(167 168 173);
+    margin-top: 50px;
 }
 
 .presentation figure{
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .presentation figure img{
-    width: 500px;
+    width: 250px;
     border-radius: 100%;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
     border: 1px solid #fff;
@@ -759,9 +783,10 @@ main {
 .presentation .main_container {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin: 100px 0 0 0;
+    flex-wrap: wrap;
 }
 
 .presentation .containers {
@@ -773,10 +798,11 @@ main {
     background-color: rgb(167 168 173);
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .presentation .containers .icon {
-    width: 50px;
+    width: 70px;
     color: black;
     height: 60px;
     padding: 0 20px 0 10px;
@@ -792,22 +818,23 @@ main {
 
 .hobbies {
     display: flex;
-    justify-content: space-between;
-    padding: 100px 0;
-    height: 900px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
     width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .hobbies article{
-    width: 1000px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 20px 0 0;
 }
 
 .hobbies article h3 {
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     padding: 10px;
     color: #fff;
@@ -815,13 +842,13 @@ main {
 
 .hobbies article iframe {
     width: 100%;
-    height: 600px;
+    height: 300px;
     border-radius: 20px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
 }
 
 .hobbies .gradient-border {
-    width: 400px;
+    width: 300px;
     padding: 5px;
     position: relative;
     border-radius: 20px;
@@ -829,7 +856,7 @@ main {
     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
     animation: animate 3s ease alternate infinite;
     background-size: 400% 400%;
-    margin: 0 0 0 20px;
+    margin-top: 50px;
 }
 
 @keyframes animate{
@@ -857,7 +884,7 @@ main {
 }
 
 .gradient-border div h3 {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     color: #fff;
 }
@@ -874,11 +901,11 @@ main {
 
 .gradient-border div .movies li {
     color: black;
-    font-size: 16px;
+    font-size: 12px;
     list-style-type: none;
     font-weight: 700;
     text-align: center;
-    height: 40px;
+    height: 20px;
 }
 
 footer {
@@ -998,5 +1025,106 @@ footer p {
     }
     100%{
         background-position-x: 1000px;
+    }
+}
+
+/*Media Queries*/
+@media screen and (min-width: 500px) {
+    header{
+        padding: 30px 50px;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    .title span{
+        font-size: 50px;
+        height: 120px;
+        letter-spacing: 10px;
+    }
+
+    .animations .welcome {
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+
+    .presentation {
+        padding: 100px;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .presentation h2 {
+        font-size: 60px;
+    }
+
+    .presentation figure {
+        width: 500px;
+        height: 500px;
+    }
+
+    .presentation figure img{
+        width: 500px;
+    }
+
+    .presentation .description{
+        width: 600px;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .presentation .main_container {
+        flex-direction: row;
+        margin-top: 100px;
+    }
+
+    .presentation .containers {
+        margin-top: 0;
+    }
+
+    .hobbies {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 100px 0;
+        margin-bottom: 0;
+    }
+
+    .hobbies article{
+        width: 1000px;
+        margin: 0 20px 0 0;
+    }
+
+    .hobbies article h3 {
+        font-size: 40px;
+    }
+
+    .hobbies article iframe {
+        height: 600px;
+    }
+
+    .hobbies .gradient-border {
+        width: 400px;
+        margin: 0 0 0 20px;
+    }
+
+    .gradient-border div h3 {
+        font-size: 30px;
+    }
+
+    .gradient-border div .movies li {
+        font-size: 16px;
+        height: 40px;
     }
 }
