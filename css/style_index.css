@@ -716,7 +716,7 @@ main {
     padding: 100px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     background-color: rgb(29 14 55);
@@ -731,16 +731,14 @@ main {
 }
 
 .presentation .description{
-    width: 700px;
+    width: 600px;
     text-align: justify;
     padding: 20px;
-    font-size: 22px;
+    font-size: 20px;
     border: 1px solid #fff;
     border-radius: 20px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
     background-color: rgb(167 168 173);
-    height: 500px;
-    margin: 20px;
 }
 
 .presentation figure{
@@ -749,7 +747,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
 }
 
 .presentation figure img{
@@ -759,12 +756,19 @@ main {
     border: 1px solid #fff;
 }
 
+.presentation .main_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 0 0 0;
+}
+
 .presentation .containers {
     border: 1px solid #fff;
     border-radius: 20px;
     padding: 20px;
-    width: 400px;
-    margin: 50px 20px;
+    width: 300px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
     background-color: rgb(167 168 173);
     display: flex;
@@ -799,6 +803,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 20px 0 0;
 }
 
 .hobbies article h3 {
@@ -824,6 +829,7 @@ main {
     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
     animation: animate 3s ease alternate infinite;
     background-size: 400% 400%;
+    margin: 0 0 0 20px;
 }
 
 @keyframes animate{
