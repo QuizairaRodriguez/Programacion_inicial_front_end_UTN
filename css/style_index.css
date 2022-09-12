@@ -1,82 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&family=Raleway:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace, sans-serif;
     scroll-behavior: smooth;
 }
 
-header nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-
-}
-
-header .logo {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header ul li {
-    list-style: none;
-    margin-left: 20px;
-}
-
-header ul li a {
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #fff;
-    border-radius: 20px;
-}
-
-header ul li a:hover, header ul li a.active {
-    background: #fff;
-    color: black;
-    font-weight: 700;
-}
-
-.wrapper {
-    width: 100vw;
-    height: 300vh;
-    overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-}
-
-.title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    color: #fff;
-    text-align: center;
-    font-weight: 700px;
-    font-size: 2em;
-    letter-spacing: 5px;
-}
-
-.title h1 {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+body {
+    background-color: black;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 #stars {
@@ -450,6 +384,7 @@ header ul li a:hover, header ul li a.active {
 }
 
 #stars2 {
+    margin: 0 auto;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -568,6 +503,7 @@ header ul li a:hover, header ul li a.active {
 }
 
 #stars3 {
+    margin: 0 auto;
     width: 3px;
     height: 3px;
     background: transparent;
@@ -644,82 +580,164 @@ header ul li a:hover, header ul li a.active {
     }
 }
 
-.images {
-    position: relative;
-    width: 100vw;
-    height: 150vh;
-    top: 150vh;
+header {
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    object-fit: cover;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.images::before {
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: #fff;
+    color: black;
+    font-weight: 700;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+}
+
+.animations {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 1500px;
+}
+
+.animations::before {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 70px;
-    background: linear-gradient(to top, rgb(167 168 173), transparent);
-    z-index: 4;
+    height: 100px;
+    background: linear-gradient(to top, rgb(29 14 55), transparent);
+    z-index: 6;
 }
 
-.images img {
+.title {
     position: absolute;
-    top: 0;
+    top: 300px; 
+}
+
+.title span{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 10px;
+    width: 100%;
+    color: #fff;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 120px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.animations img {
+    position: absolute;
+    bottom: 0px;
     left: 0;
     width: 100%;
-    height: 150vh;
-    object-fit: cover;
+    object-fit: contain;
     pointer-events: none;
 }
 
-.images img#moon {
+.animations img#moon {
     mix-blend-mode: screen;
 }
 
-.images img#rocks {
-    z-index: 2;
-}
-
-.images img#woman {
+.animations img#horizon {
     z-index: 3;
+} 
+
+.animations img#rocks {
+    z-index: 4;
 }
 
-.images .welcome {
-    position:  absolute;
+.animations img#woman {
+    z-index: 5;
+}
+
+.animations .welcome {
     color: #fff;
     white-space: nowrap;
-    font-size: 4vw;
-    z-index: 1;
-    transform: translateY(80px);
+    font-size: 50px;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 10px;
+    z-index: 2;
+    position: absolute;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
 }
 
 .presentation {
     padding: 100px;
-    background-color: rgb(167 168 173);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    background-color: rgb(29 14 55);
 }
 
 .presentation h2 {
     width: 100%;
-    font-size: 4em;
+    font-size: 60px;
     text-align: center;
     padding: 0 0 50px 0;
+    color: #fff;
 }
 
 .presentation .description{
     width: 50%;
     text-align: justify;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 22px;
     border: 1px solid #fff;
     border-radius: 20px;
-    box-shadow: 0 9px 16px rgb(56 56 56 / 49%);
+    box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
+    background-color: rgb(167 168 173);
 }
 
 .presentation figure{
@@ -731,8 +749,8 @@ header ul li a:hover, header ul li a.active {
 
 .presentation figure img{
     width: 500px;
-    border-radius: 50%;
-    box-shadow: 0 9px 16px rgb(56 56 56 / 49%);
+    border-radius: 100%;
+    box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
     border: 1px solid #fff;
 }
 
@@ -742,9 +760,230 @@ header ul li a:hover, header ul li a.active {
     padding: 20px;
     width: 30%;
     margin: 50px 0 0 0;
-    box-shadow: 0 9px 16px rgb(56 56 56 / 49%)
+    box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
+    background-color: rgb(167 168 173);
+    display: flex;
+    justify-content: space-between;
+    
 }
 
-.presentation .containers h3, .presentation .containers p {
+.presentation .containers .icon {
+    width: 50px;
+    color: black;
+    height: 60px;
+}
+
+.presentation .containers div {
+    width: 90%;
+}
+
+.presentation .containers div h3, .presentation .containers div p {
+    font-size: 20px;
+}
+
+.hobbies {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    height: 900px;
+    width: 100%;
+}
+
+.hobbies article{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hobbies article h3 {
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.hobbies article iframe {
+    width: 100%;
+    height: 600px;
+}
+
+.hobbies .gradient-border {
+    width: 25%;
+    padding: 5px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 35px rgb(255 255 255 / 49%);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    animation: animate 3s ease alternate infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    0%{
+        background-position: 0% 50%;
+    }
+}
+
+
+.hobbies div {
+    background-color: rgb(29 14 55);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    height: 100%;
+    padding: 10px;
+}
+
+.gradient-border div h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.gradient-border div .movies {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgb(167 168 173);
+    width: 85%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 20px 35px rgb(255 255 255 / 49%);
+}
+
+.gradient-border div .movies li {
+    color: black;
+    font-size: 20px;
+    list-style-type: none;
+    font-weight: 700;
+    text-align: center;
+    height: 40px;
+}
+
+footer {
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    background-color: white;
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.social_icon, .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social_icon li, .menu li {
+    list-style: none;
+}
+
+.social_icon li a {
     font-size: 2em;
+    color: black;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social_icon li a:hover {
+    transform: translateY(-10px);
+    color: rgb(29 14 55);
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: black;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 700;
+}
+
+.menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.waves .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-size: 1000px 100px;
+    background: url(../images/wave.png);
+}
+
+.waves .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+.waves .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+.waves .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+.waves .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_2 {
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
 }

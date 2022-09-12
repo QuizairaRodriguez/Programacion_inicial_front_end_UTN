@@ -2,101 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR - My Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QR - Web Developer</title>
     <link rel="stylesheet" href="./css/style_index.css">
 </head>
 <body>
+    <div class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
     <header>
+        <a href="./index.html" class="logo">Logo</a>
         <nav>
-          <a href="./index.html" class="logo">Logo</a>
-          <button><i class="fas fa-bars"></i></button>
-          <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="./pages/codigo.html">Code</a></li>
-            <li><a href="./pages/cv.html">Resume</a></li>
-            <li><a href="./pages/mejor_amigo.html">My Best Friend</a></li>
-            <li><a href="./pages/contacto.html">Contact</a></li>
-          </ul>
-        </nav>
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">My Best Friend</a></li>
+            </ul>
+          </nav>
     </header>
     <main>
-        <section class="wrapper">
-            <div id="stars"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
+        <section class="animations">
             <div class="title">
-                <h1>Hello!!!</h1>
-                <h1>I'm a Full-Stack Web Developer</h1>
+                <span>Hello!!</span>
+                <span>I'm a Full-Stack Web Developer</span>
             </div> 
-            <div class="images">
-                <img src="./images/moon-removebg.png" alt="luna" id="moon">
-                <img src="./images/horizonte-removebg.png" alt="horizonte" id="horizon">
-                <h2 class="welcome">Welcome to My Portfolio</h2>
-                <img src="./images/rocas-removebg.png" alt="rocas" id="rocks">
-                <img src="./images/woman-removebg.png" alt="mujer observando a través de un telescopio" id="woman">
-            </div>
+            <img src="./images/moon-removebg.png" alt="luna" id="moon">
+            <img src="./images/horizonte-removebg.png" alt="horizonte" id="horizon">
+            <span class="welcome">Welcome to my Portfolio</span>
+            <img src="./images/rocas-removebg.png" alt="rocas" id="rocks">
+            <img src="./images/woman-removebg.png" alt="mujer observando a través de un telescopio" id="woman">
         </section>
-        <section class="presentation">
+        <section class="presentation" id="presentation">
             <h2>Quizaira Rodriguez</h2>
             <figure>
                 <img src="./images/perfil.jpg" alt="imagen de Quizaira Rodriguez" width="500px">
             </figure>
             <p class="description">¡Hola! soy <strong>Full-Stack Web Developer</strong>, nací en un hermoso país llamado Venezuela pero estoy agradecida con Argentina por recibirme y brindarme oportunidades.  Apasionada por el mundo de la tecnología y en constante aprendizaje. Me motiva superar desafíos y generar productos de valor para las personas. Me encanta ver péliculas y series, probar diferentes gastronomías, escuchar música, viajar y pasar tiempo con mi familia, quienes son mi fuerza todos los días. Trato de valorar la sencillez de la vida y los pequeños momentos que esta me regala. No soy madre, pero la vida me dió la posibilidad de tener un angelito con cola quién fue mi amigo, mi compañero y mi confidente. De lo único que culpo al destino, es que la vida de los perros sea tan corta.</p>
             <div class="containers">
-                <h3>Proyectos</h3>
-                <p>5</p>
+                <ion-icon name="library-outline" class="icon"></ion-icon>
+                <div>
+                    <h3>Proyectos</h3>
+                    <p>5</p>
+                </div>  
             </div>
             <div class="containers">
-                <h3>Tecnologías</h3>
-                <p>10</p>
+                <ion-icon name="hardware-chip-outline" class="icon"></ion-icon>
+                <div>
+                    <h3>Tecnologías</h3>
+                    <p>10</p>
+                </div>
             </div>
             <div class="containers">
-                <h3>Experencia</h3>
-                <p>0 - 1 año</p>
+                <ion-icon name="hourglass-outline" class="icon"></ion-icon>
+                <div>
+                    <h3>Experencia</h3>
+                    <p>0 - 1 año</p>
+                </div>
+            </div>
+            <div class="hobbies">
+                <article>
+                    <h3>Te comparto una de mis canciones preferidas</h3>
+                    <iframe src="https://www.youtube.com/embed/Y8fvYCkjsqc" title="De ellos aprendí-David Rees (Letra + Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </article>
+                <aside class="gradient-border">
+                    <div>
+                        <h3>Mis películas de Disney favoritas</h3>
+                        <ul class="movies">
+                            <li>Winnie Pooh</li>
+                            <li>Fronzen</li>
+                            <li>Mulan</li>
+                            <li>Coco</li>
+                            <li>Intensamente</li>
+                            <li>Wall-E</li>
+                            <li>Up: una aventura de altura</li>
+                            <li>Zootopia</li>
+                            <li>101 dálmatas</li>
+                            <li>Grandes Héroes</li>
+                            <li>Raya: el último dragón</li>
+                            <li>Lilo y Stitch</li>
+                            <li>Valiente</li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
         </section>
-        <article>
-            <h2>Te comparto una de mis canciones preferidas!!</h2>
-            <iframe width="800px" height="500px" src="https://www.youtube.com/embed/Y8fvYCkjsqc" title="De ellos aprendí-David Rees (Letra + Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </article>
-        <aside>
-            <h2>Mis películas de Disney favoritas</h2>
-            <ul>
-                <li>Winnie Pooh</li>
-                <li>Fronzen</li>
-                <li>Mulan</li>
-                <li>Coco</li>
-                <li>Intensamente</li>
-                <li>Wall-E</li>
-                <li>Up: una aventura de altura</li>
-                <li>Zootopia</li>
-                <li>101 dálmatas</li>
-                <li>Grandes Héroes</li>
-            </ul>
-        </aside>
-        
     </main>
     <footer>
-        <ul>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
             <li><a href="https://es-la.facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
             <li><a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
             <li><a href="https://ar.linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             <li><a href="https://www.instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
             <li><a href="https://github.com" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
         </ul>
-        <ul>
-            <li><a href="mailto:kiss02andre@gmail.com">Contáctame</ion-icon></a></li>
-            <li><a href="https://github.com/QuizairaRodriguez" target="_blank">Repositorio</ion-icon></a></li>
-            <li><a href="./index.html" target="_blank">Sobre Mi</ion-icon></a></li>
+        <ul class="menu">
+            <li><a href="mailto:kiss02andre@gmail.com">Contact me</ion-icon></a></li>
+            <li><a href="https://github.com/QuizairaRodriguez" target="_blank">Repository</ion-icon></a></li>
+            <li><a href="#presentation">About me</ion-icon></a></li>
         </ul>
-        <p>Copyright &copy; 2022 - Desarrollado por Quizaira Rodriguez</p>
+        <p>Copyright &copy; 2022 - Developed by Quizaira Rodriguez</p>
     </footer>
-
+    <script src="./js/index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
 </body>
 </html>
