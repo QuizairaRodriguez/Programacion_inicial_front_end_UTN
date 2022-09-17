@@ -745,12 +745,14 @@ main {
     background-color: rgb(29 14 55);
 }
 
-.presentation h2 {
+.presentation h2, .hobbies h2 {
     width: 100%;
     font-size: 40px;
     text-align: center;
-    padding: 0 0 50px 0;
     color: #fff;
+    margin: 0 0 30px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .presentation .description{
@@ -758,10 +760,10 @@ main {
     text-align: justify;
     padding: 20px;
     font-size: 14px;
-    border: 1px solid #fff;
     border-radius: 20px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
-    background-color: rgb(167 168 173);
+    /*background-color: rgb(167 168 173);*/
+    background-color: rgb(171 160 202);
     margin-top: 50px;
 }
 
@@ -787,15 +789,15 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin: 50px 0 75px;
 }
 
 .presentation .containers {
-    border: 1px solid #fff;
     border-radius: 20px;
     padding: 20px;
-    width: 300px;
+    width: 250px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
-    background-color: rgb(167 168 173);
+    background-color: rgb(171 160 202);
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
@@ -820,10 +822,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
     width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin: 25px 0 100px;
 }
 
 .hobbies article{
@@ -843,7 +844,6 @@ main {
 .hobbies article iframe {
     width: 100%;
     height: 300px;
-    border-radius: 20px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
 }
 
@@ -853,7 +853,7 @@ main {
     position: relative;
     border-radius: 20px;
     box-shadow: 0 20px 35px rgb(255 255 255 / 49%);
-    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background: linear-gradient(to right, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
     animation: animate 3s ease alternate infinite;
     background-size: 400% 400%;
     margin-top: 50px;
@@ -870,7 +870,6 @@ main {
         background-position: 0% 50%;
     }
 }
-
 
 .hobbies div {
     background-color: rgb(29 14 55);
@@ -890,9 +889,8 @@ main {
 }
 
 .gradient-border div .movies {
-    border: 1px solid #fff;
     border-radius: 20px;
-    background-color: rgb(167 168 173);
+    background-color: rgb(171 160 202);
     width: 85%;
     padding: 5px;
     margin-bottom: 10px;
@@ -929,6 +927,7 @@ footer {
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
+    z-index: 1000;
 }
 
 .social_icon li, .menu li {
@@ -956,11 +955,13 @@ footer {
     transition: 0.5s;
     text-decoration: none;
     opacity: 0.75;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .menu li a:hover {
     opacity: 1;
+    font-size: 1.3em;
+    color: rgb(29 14 55);
 }
 
 footer p {
@@ -968,63 +969,62 @@ footer p {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
 }
 
-.waves .wave {
+.wave {
     position: absolute;
-    top: -100px;
+    bottom: 130px;
     left: 0;
     width: 100%;
-    height: 100px;
-    background-size: 1000px 100px;
+    height: 129px;
     background: url(../images/wave.png);
+    background-size: 1280px 129px;  
 }
 
-.waves .wave#wave1 {
-    z-index: 1000;
+.wave1 {
+    z-index: 999;
     opacity: 1;
-    bottom: 0;
-    animation: animateWave 4s linear infinite;
+    animation: animateWave 10s linear infinite;
 }
 
-.waves .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animateWave_2 4s linear infinite;
-}
-
-.waves .wave#wave3 {
-    z-index: 1000;
+.wave2 {
+    z-index: 998;
     opacity: 0.2;
-    bottom: 15px;
-    animation: animateWave 3s linear infinite;
+    bottom: 140px;
+    animation: animateWave_2 10s linear infinite;
 }
 
-.waves .wave#wave4 {
-    z-index: 999;
+.wave3 {
+    z-index: 997;
+    opacity: 0.5;
+    bottom: 145px;
+    animation: animateWave 20s linear infinite;
+}
+
+.wave4 {
+    z-index: 996;
     opacity: 0.7;
-    bottom: 20px;
-    animation: animateWave_2 3s linear infinite;
+    bottom: 150px;
+    animation: animateWave_2 20s linear infinite;
 }
 
 @keyframes animateWave {
     0%{
-        background-position-x: 1000px;
+        background-position-x: 0px;
     }
     100%{
-        background-position-x: 0px;
+        background-position-x: 1280px;
     }
 }
 
 @keyframes animateWave_2 {
     0%{
-        background-position-x: 0px;
+        background-position-x: 1280px;
     }
     100%{
-        background-position-x: 1000px;
+        background-position-x: 0px;
     }
 }
 
@@ -1062,32 +1062,32 @@ footer p {
     .presentation {
         padding: 100px;
         justify-content: space-between;
-        flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .presentation h2 {
+    .presentation h2, .hobbies h2 {
         font-size: 60px;
     }
 
     .presentation figure {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
+        margin: 25px 0;
     }
 
     .presentation figure img{
-        width: 500px;
+        width: 400px;
     }
 
     .presentation .description{
-        width: 600px;
-        font-size: 20px;
+        width: 100%;
+        font-size: 16px;
         margin-top: 0;
+        margin: 50px 0 25px;
     }
 
     .presentation .main_container {
         flex-direction: row;
-        margin-top: 100px;
     }
 
     .presentation .containers {
@@ -1098,17 +1098,16 @@ footer p {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: flex-end;
-        padding: 100px 0;
+        padding: 0 0 100px 0;
         margin-bottom: 0;
     }
 
     .hobbies article{
-        width: 1000px;
-        margin: 0 20px 0 0;
+        width: 700px;
     }
 
     .hobbies article h3 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .hobbies article iframe {
@@ -1116,13 +1115,17 @@ footer p {
     }
 
     .hobbies .gradient-border {
-        width: 400px;
+        width: 350px;
         margin: 0 0 0 20px;
         height: 720px;
     }
 
     .gradient-border div h3 {
         font-size: 30px;
+    }
+
+    .gradient-border div .movies {
+        width: 250px;
     }
 
     .gradient-border div .movies li {
