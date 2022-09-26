@@ -762,8 +762,7 @@ main {
     font-size: 14px;
     border-radius: 20px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
-    /*background-color: rgb(167 168 173);*/
-    background-color: rgb(171 160 202);
+    background-color: rgba(171, 160, 202,0.7);
     margin-top: 50px;
 }
 
@@ -797,7 +796,7 @@ main {
     padding: 20px;
     width: 250px;
     box-shadow: 0 9px 16px rgb(255 255 255 / 49%);
-    background-color: rgb(171 160 202);
+    background-color: rgba(171, 160, 202,0.7);
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
@@ -890,7 +889,7 @@ main {
 
 .gradient-border div .movies {
     border-radius: 20px;
-    background-color: rgb(171 160 202);
+    background-color: rgba(171, 160, 202,0.7);
     width: 85%;
     padding: 5px;
     margin-bottom: 10px;
@@ -1103,7 +1102,7 @@ footer p {
     }
 
     .hobbies article{
-        width: 700px;
+        width: 70%;
     }
 
     .hobbies article h3 {
@@ -1112,6 +1111,7 @@ footer p {
 
     .hobbies article iframe {
         height: 600px;
+        margin-top: 50px;
     }
 
     .hobbies .gradient-border {
