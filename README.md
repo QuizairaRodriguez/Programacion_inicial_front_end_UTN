@@ -22,4 +22,6 @@ Curso orientado a adquirir conocimientos basados en los avances tecnológicos de
 
 <b>-Link al Deploy de la Aplicación:</b>
 
-El Proyecto que realice fue la primera versión de mi Portfolio de Desarrolladora Web Full Stack. Utilice HTML5, CSS3, JS y Bootstrap (framework).
+El Proyecto que realice es el Front-End de la primera versión de mi Portfolio como Desarrolladora Web Full Stack. 
+<br>
+Utilice HTML5, CSS3, JS y Bootstrap (framework).
