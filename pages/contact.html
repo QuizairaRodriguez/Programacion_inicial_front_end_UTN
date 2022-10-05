@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - QR - Web Developer</title>
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/style_contact.css">
+    <title>Contacto - QR - Web Developer</title>
 </head>
 <body>
+    <!--STARS---------------------------------------------->
     <div class="wrapper">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
     </div>
+    <!--NAVBAR---------------------------------------------->
     <header>
         <a href="./index.html" class="logo">Logo</a>
         <button class="nav-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
@@ -27,6 +30,7 @@
           </nav>
     </header>
     <main>
+        <!--BANNER-------------------------------------------->
         <div class="banner">
             <div class="layer"></div>
             <div class="info">
@@ -34,43 +38,75 @@
             </div>  
         </div>
         <section class="contact">
+            <!--POPUP-------------------------------------------->
+            <div class="popup" id="popup">
+                <img src="../images/check.png" alt="icono de realizado con éxito">
+                <h2>Gracias!</h2>
+                <p>El envió del formulario se realizó con éxito. Pronto lo contactaré.</p>
+                <button id="boton-popup">OK</button>
+            </div>
             <h3>Completa con tus datos el formulario y te contactaré próximamente</h3>
-            <form action="" method=""> 
+            <!--FORMULARIO DE CONTACTO-------------------------------------------->
+            <form action="" method="" id="form"> 
                 <fieldset>
                     <legend>Datos Personales</legend>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                        <label for="apellido">Apellido:</label>
-                        <input type="text"name="apellido" placeholder="Apellido" required>
-                        <label for=""provincia>Provincia de residencia:</label>
-                        <input type="text" name="provincia" required>
+                        <div class="form-control">
+                            <label for="nombre">Nombre:</label><i class="fas fa-check-circle"></i>
+                            <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                            <small>Campo Obligatorio</small>
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="form-control">
+                            <label for="apellido">Apellido:</label><i class="fas fa-check-circle"></i>
+                            <input type="text"name="apellido" placeholder="Apellido" id="apellido">
+                            <small>Campo Obligatorio</small>
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
                 </fieldset>
                 <fieldset>
                     <legend>Datos de Contacto</legend>
-                        <label for="telefono">Teléfono:</label>
-                        <input type="number" name="telefono" placeholder="11-12345678" required>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" placeholder="correo@email.com" required>
-                        <label for="asunto">Asunto:</label>
-                        <input type="text" name="asunto" placeholder="Aquí  va el asunto de tu mensaje" required>
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea name="mensaje" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                    <div class="form-control">
+                        <label for="telefono">Teléfono:</label><i class="fas fa-check-circle"></i>
+                        <input type="number" name="telefono" placeholder="1122345678" id="telefono">
+                        <small>Campo Obligatorio</small>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email:</label><i class="fas fa-check-circle"></i>
+                        <input type="email" name="email" placeholder="correo@email.com" id="email">
+                        <small>Campo Obligatorio</small>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>   
+                    <div class="form-control">
+                        <label for="asunto">Asunto:</label><i class="fas fa-check-circle"></i>
+                        <input type="text" name="asunto" placeholder="Aquí  va el asunto de tu mensaje" id="asunto">
+                        <small>Campo Obligatorio</small>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="form-control">
+                        <label for="mensaje">Mensaje:</label><i class="fas fa-check-circle"></i>
+                        <textarea name="mensaje" placeholder="Escribe aquí tu mensaje..." id="mensaje"></textarea>
+                        <small>Campo Obligatorio</small>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>     
                 </fieldset>
                 <div class="buttons">
                     <button type="submit"><i class="fas fa-external-link-alt"></i> Enviar</button>
-                    <button type="reset"><i class="fas fa-trash"></i> Borrar campos</button>   
+                    <button type="reset" id="btn-reset"><i class="fas fa-trash"></i> Borrar campos</button>   
                 </div>
             </form>
         </section>
         <section class="location">
             <div>
                 <i class="fas fa-map-marker-alt"></i>
+                <div class="pulse"></div>
                 <h3>Dónde me encuentro actualmente</h3>
                 <address>Ciudad Autónoma de Buenos Aires - Argentina</address>
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6566.17909266411!2d-58.470968808378785!3d-34.627177326225365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9883548fcc5%3A0x3feabdde36f96cb5!2sPlaza%20General%20Pueyrred%C3%B3n!5e0!3m2!1ses-419!2sar!4v1664153946406!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+    <!--FOOTER---------------------------------------------->
     <footer>
         <div>
             <div class="wave wave1"></div>

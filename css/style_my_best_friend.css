@@ -1,3 +1,4 @@
+/* GENERAL---------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&family=Raleway:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
 
 * {
@@ -13,6 +14,11 @@ body {
     min-height: 100vh;
 }
 
+main {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* STARS---------------------------------------- */
 #stars {
     width: 1px;
     height: 1px;
@@ -580,6 +586,7 @@ body {
     }
 }
 
+/* NAVBAR---------------------------------------- */
 header {
     font-family: 'Roboto Mono', monospace, sans-serif;
     height: 100px;
@@ -655,10 +662,6 @@ nav ul li a:hover, nav ul li a.active {
     transition: 0.5s;
 }
 
-main {
-    font-family: 'Poppins', sans-serif;
-}
-
 .title {
     width: 100vw;
     position: relative;
@@ -715,6 +718,7 @@ h1 {
     margin-bottom: 100px;
 }
 
+/* CAROUSEL---------------------------------------- */
 .carousel {
     width: 300px;
     height: 400px;
@@ -744,6 +748,7 @@ audio {
     color: black;
 }
 
+/*FOOTER---------------------------------------- */
 footer {
     font-family: 'Roboto Mono', monospace, sans-serif;
     background-color: white;

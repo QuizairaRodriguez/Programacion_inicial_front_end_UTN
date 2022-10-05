@@ -1,6 +1,8 @@
-let navToggle = document.querySelector(".nav-toggle");
-let navMenu = document.querySelector("nav");
+// CAPTURA DE OBJETOS DE HTML DEL NAVBAR------------------------------------------
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector("nav");
 
+//EVENTO
 navToggle.addEventListener('click', function(){
     navMenu.classList.toggle("visible_menu");
 
