@@ -7,3 +7,19 @@ Curso orientado a adquirir conocimientos basados en los avances tecnológicos de
 <ul><li>Desarrollar el diseño básico de un sitio web en HTML5, CSS3 y Bootstrap.</li>
 <li>Utilizar el framework de diseño Bootstrap.</li>
 <li>Aprender Javascript.</li></ul>
+
+<b>-Proyecto Final:</b> componentes:
+
+<ol> 
+<li>Estructura HTML de la Aplicación.</li>
+<li>Estilos finales de la Aplicación.</li>
+<li>Script de la Aplicación.</li>
+<li>Deploy de la Aplicación.</li>
+<li>Readme explicando el propósito de la Aplicación.</li></ol>
+
+<b>-Link a GitHub de la Aplicación:</b>
+
+
+<b>-Link al Deploy de la Aplicación:</b>
+
+El Proyecto que realice fue la primera versión de mi Portfolio de Desarrolladora Web Full Stack. Utilice HTML5, CSS3, JS y Bootstrap (framework).
